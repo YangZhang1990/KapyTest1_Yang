@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ced1f53c1a024fc5bc7c4933414605c3" Name="Diagram1">
+        <EntityTypeShape EntityType="kapymvc1Model.Action" Width="1.5" PointX="9" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.ActionRecord" Width="1.5" PointX="11.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.Category1" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.Comment" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.News" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.Role" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.Source1" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.sysdiagram" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.User" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.User_Source1" Width="1.5" PointX="8.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="kapymvc1Model.database_firewall_rules" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="kapymvc1Model.FK_ActionRecord_Action" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_ActionRecord_User" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_ActionRecord_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_News_Category1" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_Comment_News" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_Comment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_News_Source1" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_User_Source1_Source1" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.FK_User_Source1_User" ManuallyRouted="false" />
+        <AssociationConnector Association="kapymvc1Model.User_Category1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<KapyTest1.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>KAPY News</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.uniqueTitle)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.newsTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.newsDate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.newsTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origUrl)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.picUrl)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.newsContent)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.numOfClicks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numOfLikes)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Category1.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Source1.sourceUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    if (item.categoryName=="Politics")
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.uniqueTitle)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.newsTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsDate)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.newsTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.origUrl)
+                </td>*@
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.picUrl) ">
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.newsContent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numOfClicks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numOfLikes)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Category1.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source1.sourceUrl)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.newsId })
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.newsId }) |
+
+                    @Html.ActionLink("Delete", "Delete", new { id=item.newsId })*@
+            </td>
+        </tr>
+    }
+
+}
+
+</table>
+
+@*http://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application*@

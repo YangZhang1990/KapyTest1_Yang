@@ -1,0 +1,45 @@
+﻿@model IEnumerable<KapyTest1.Models.Category1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryName)
+        </th>
+       @*<th>
+            @Html.DisplayNameFor(model => model.isSelected)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryId)
+        </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.categoryName)
+        </th>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.isSelected)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.categoryName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.categoryName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.categoryName })
+        </td>
+    </tr>
+}
+
+</table>

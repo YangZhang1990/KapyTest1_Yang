@@ -1,0 +1,45 @@
+﻿@model IEnumerable<KapyTest1.Models.Source1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sources</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sourceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sourceName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.sourceUrl)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sourceId)
+        </td>
+        <td>
+            <a href="@Html.DisplayFor(modelItem => item.sourceUrl) ">@Html.DisplayFor(modelItem => item.sourceName)</a>
+        </td>
+        @*<td>
+            <a href="@Html.DisplayFor(modelItem => item.sourceUrl) ">@Html.DisplayFor(modelItem => item.sourceUrl)</a>
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sourceName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sourceName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sourceName })
+        </td>
+    </tr>
+}
+
+</table>
